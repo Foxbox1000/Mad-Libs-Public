@@ -1,15 +1,64 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="index.js"></script>
+    <style>
+      .parenthesis-textbox {
+        height: 40px;
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      .gray-prompt {
+        color: gray;
+      }
+    </style>
   </head>
-  <body>
-    <div class="container">
-      <h2>Text Input</h2>
-      <textarea id="input"></textarea>
-      <button id="submit">Submit</button>
-      <div id="output" class="output"></div>
+  <body style="background-color: #1a1a1a;">
+    <div style="text-align: center;">
+      <textarea id="input-text" rows="10" cols="100" style="font-size: 24px;"></textarea>
+      <br>
+      <button id="submit-button">Submit</button>
     </div>
+    <script>
+      const submitButton = document.getElementById("submit-button");
+      const inputText = document.getElementById("input-text");
+
+      submitButton.addEventListener("click", function() {
+        const input = inputText.value;
+        const matches = input.match(/\(([^)]+)\)/g);
+
+        if (matches) {
+          for (let i = 0; i < matches.length; i++) {
+            const strippedMatch = matches[i].slice(1, -1);
+            const textbox = document.createElement("input");
+            textbox.type = "text";
+            textbox.value = strippedMatch;
+            textbox.classList.add("parenthesis-textbox");
+            textbox.placeholder = strippedMatch;
+            document.body.appendChild(textbox);
+          }
+
+          const newSubmitButton = document.createElement("button");
+          newSubmitButton.innerText = "Update Text";
+          newSubmitButton.style.marginTop = "20px";
+          newSubmitButton.style.marginBottom = "20px";
+          document.body.appendChild(newSubmitButton);
+
+          newSubmitButton.addEventListener("click", function() {
+            let updatedText = input;
+            const parenthesisTextboxes = document.getElementsByClassName(
+              "parenthesis-textbox"
+            );
+            for (let i = 0; i < parenthesisTextboxes.length; i++) {
+              const textboxValue = parenthesisTextboxes[i].value;
+              updatedText = updatedText.replace(
+                `(${matches[i].slice(1, -1)})`,
+                textboxValue
+              );
+            }
+            inputText.value = updatedText;
+          });
+        }
+      });
+    </script>
   </body>
 </html>
