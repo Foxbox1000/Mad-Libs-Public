@@ -73,8 +73,27 @@
             parenthesisText = "";
             console.log(input);
           }
-        }
+        };
 //      });
+        const newSubmitButton = document.createElement("button");
+        newSubmitButton.innerText = "Update Text";
+        newSubmitButton.style.marginTop = "20px";
+        newSubmitButton.style.marginBottom = "20px";
+        document.body.appendChild(newSubmitButton);
+
+        newSubmitButton.addEventListener("click", function() {
+          let updatedText = input;
+          const parenthesisTextboxes = document.getElementsByClassName(
+            "parenthesis-textbox"
+          );
+          for (let i = 0; i < parenthesisTextboxes.length; i++) {
+            const textboxValue = parenthesisTextboxes[i].value;
+            updatedText = updatedText.replace(
+              `(${matches[i].slice(1, -1)})`,
+              textboxValue
+            );
+          }
+          inputText.value = updatedText;
     </script>
   </body>
 </html>
