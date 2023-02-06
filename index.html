@@ -50,13 +50,14 @@
     </div>
 
     <script>
-      const submitBtn = document.querySelector("#submit");
-      submitBtn.addEventListener("click", function() {
-        const input = document.querySelector("#input").value;
+//      const submitBtn = document.querySelector("#submit");
+//      submitBtn.addEventListener("click", function() {
+//        const input = document.querySelector("#input").value;
         let insideParenthesis = false;
         let parenthesisText = "";
         let startIndex = 0;
         let endIndex = 0;
+        let input = "There are many (adjectives) to choose a/an (noun) to read. First, you could ask for recommendations from friends and (plural noun). Just don't ask aunt (female name) – she only reads (adjectives) books with (article of clothing) on the cover. If your friends and family are know help";
         for (let i = 0; i < input.length; i++) {
           if (input[i] === '(') {
             insideParenthesis = true;
@@ -72,7 +73,7 @@
             parenthesisText = "";
           }
         }
-      });
+//      });
     </script>
   </body>
 </html>
