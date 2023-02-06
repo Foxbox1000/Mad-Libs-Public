@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #0a0a0a;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      textarea {
+        width: 100%;
+        height: 200px;
+        font-size: 20px;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+
+      .output {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+
+      .output-box {
+        width: 80%;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Text Input</h2>
+      <textarea id="input"></textarea>
+      <button id="submit">Submit</button>
+      <div id="output" class="output"></div>
+    </div>
+
+    <script>
+      const submitBtn = document.querySelector("#submit");
+      submitBtn.addEventListener("click", function() {
+        const input = document.querySelector("#input").value;
+        const words = input.split(" ");
+        const output = document.querySelector("#output");
+        output.innerHTML = "";
+        for (let i = 0; i < words.length; i++) {
+          if (words[i].startsWith("(")) {
+            const box = document.createElement("div");
+            box.classList.add("output-box");
+            box.innerHTML = words[i];
+            output.appendChild(box);
+          } else {
+            const p = document.createElement("p");
+            p.innerHTML = words[i];
+            output.appendChild(p);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
