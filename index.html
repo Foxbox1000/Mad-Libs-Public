@@ -64,18 +64,15 @@
           } else if (input[i] === ')') {
             insideParenthesis = false;
             endIndex = i;
-            const text = input.substring(startIndex, endIndex).trim();
-            const words = text.split(" ");
-            for (let j = 0; j < words.length; j++) {
-              const box = document.createElement("textarea");
-              box.classList.add("output-box");
-              box.innerHTML = words[j];
-              document.querySelector("#output").appendChild(box);
-            }
+            parenthesisText += " " + input.substring(startIndex, endIndex).trim();
+            const box = document.createElement("textarea");
+            box.classList.add("output-box");
+            box.innerHTML = parenthesisText.trim();
+            document.querySelector("#output").appendChild(box);
+            parenthesisText = "";
           }
         }
       });
     </script>
   </body>
 </html>
-
