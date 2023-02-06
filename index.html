@@ -53,28 +53,29 @@
       const submitBtn = document.querySelector("#submit");
       submitBtn.addEventListener("click", function() {
         const input = document.querySelector("#input").value;
-        const words = input.split(" ");
-        const output = document.querySelector("#output");
-        output.innerHTML = "";
         let insideParenthesis = false;
         let parenthesisText = "";
-        for (let i = 0; i < words.length; i++) {
-          if (words[i].startsWith("(")) {
+        let startIndex = 0;
+        let endIndex = 0;
+        for (let i = 0; i < input.length; i++) {
+          if (input[i] === '(') {
             insideParenthesis = true;
-            parenthesisText = words[i].substring(1);
-          } else if (words[i].endsWith(")")) {
+            startIndex = i + 1;
+          } else if (input[i] === ')') {
             insideParenthesis = false;
-            parenthesisText += " " + words[i].substring(0, words[i].length - 1);
-            const box = document.createElement("textarea");
-            box.classList.add("output-box");
-            box.innerHTML = parenthesisText;
-            output.appendChild(box);
-            parenthesisText = "";
-          } else if (insideParenthesis) {
-            parenthesisText += " " + words[i];
+            endIndex = i;
+            const text = input.substring(startIndex, endIndex).trim();
+            const words = text.split(" ");
+            for (let j = 0; j < words.length; j++) {
+              const box = document.createElement("textarea");
+              box.classList.add("output-box");
+              box.innerHTML = words[j];
+              document.querySelector("#output").appendChild(box);
+            }
           }
         }
       });
     </script>
   </body>
 </html>
+
