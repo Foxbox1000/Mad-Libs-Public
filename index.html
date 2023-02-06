@@ -57,7 +57,7 @@
         const output = document.querySelector("#output");
         output.innerHTML = "";
         for (let i = 0; i < words.length; i++) {
-          if (words.startsWith("(")) {
+          if (words[i].startsWith("(")) {
             const endIndex = words[i].indexOf(")");
             if (endIndex !== -1) {
               const box = document.createElement("textarea");
