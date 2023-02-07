@@ -44,7 +44,12 @@
         text-align: center;
         margin: 20px auto;
       }
-      textarea, endtextbox {
+      .generated {
+        width: 100%;
+        text-align: center;
+        margin: 20px auto;
+      }
+      textarea {
         width: 80%;
         height: 200px;
         font-size: 20px;
@@ -107,7 +112,7 @@
             endtextbox.type = "text";
             endtextbox.classList.add("end-textbox");
             endtextbox.value = updatedText;
-            document.querySelector("#generate").appendChild(endtextbox);
+            document.querySelector("#generated").appendChild(endtextbox);
             
 //            inputText.value = updatedText;
           });
