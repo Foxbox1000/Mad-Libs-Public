@@ -92,14 +92,14 @@
           }
 
           const newSubmitButton = document.createElement("input");
-          newSubmitButton.value = "Update Text";
-          newSubmitButton.onclick = "Generate";
           newSubmitButton.type = "generate";
+          newSubmitButton.value = "Update Text";
+          newSubmitButton.onclick = "Generate()";
           newSubmitButton.style.marginTop = "20px";
           newSubmitButton.style.marginBottom = "20px";
           document.querySelector("#generate").appendChild(newSubmitButton);
 
-          newSubmitButton.addEventListener("click", function() {
+          function Generate() {
             let updatedText = input;
             const parenthesisTextboxes = document.getElementsByClassName(
               "parenthesis-textbox"
@@ -118,7 +118,7 @@
             document.querySelector("#generated").appendChild(endtextbox);
             
 //            inputText.value = updatedText;
-          });
+          };
         }
       };
     </script>
