@@ -38,6 +38,11 @@
         text-align: center;
         margin: 20px auto;
       }
+      .generate {
+        width: 100%;
+        text-align: center;
+        margin: 20px auto;
+      }
       textarea {
         width: 80%;
         height: 200px;
@@ -59,6 +64,7 @@
       <input type="submit" value="Submit" onclick="submitForm()">
     </div>
     <div id="output" class="output"></div>
+    <div id="generate" class="generate"></div>
     <script>
       const inputText = document.getElementById("input-text");
 
@@ -82,7 +88,7 @@
           newSubmitButton.type = "generate";
           newSubmitButton.style.marginTop = "20px";
           newSubmitButton.style.marginBottom = "20px";
-          document.querySelector("#output").appendChild(newSubmitButton);
+          document.querySelector("#generate").appendChild(newSubmitButton);
 
           newSubmitButton.addEventListener("click", function() {
             let updatedText = input;
