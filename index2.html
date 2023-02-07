@@ -94,13 +94,13 @@
           const newSubmitButton = document.createElement("input");
           newSubmitButton.type = "generate";
           newSubmitButton.value = "Update Text";
-          newSubmitButton.onclick = "Generate()";
+          newSubmitButton.onclick = "generate()";
           newSubmitButton.readonly;
           newSubmitButton.style.marginTop = "20px";
           newSubmitButton.style.marginBottom = "20px";
           document.querySelector("#generate").appendChild(newSubmitButton);
 
-          function Generate() {
+          function generate() {
             let updatedText = input;
             const parenthesisTextboxes = document.getElementsByClassName(
               "parenthesis-textbox"
