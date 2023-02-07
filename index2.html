@@ -20,7 +20,7 @@
         overflow: hidden;
         resize: none;
       }
-      .output {
+      input[type=submit] {
         background-color: green;
         color: white;
         padding: 12px 20px;
@@ -54,13 +54,15 @@
       <textarea id="input-text" rows="10" cols="100" style="font-size: 24px;"></textarea>
       <br>
       <button id="submit-button">Submit</button>
+      <input type="submit" value="Submit" onclick="submitForm()">
     </div>
     <div id="output" class="output"></div>
     <script>
-      const submitButton = document.getElementById("submit-button");
+//      const submitButton = document.getElementById("submit-button");
       const inputText = document.getElementById("input-text");
 
-      submitButton.addEventListener("click", function() {
+//      submitButton.addEventListener("click", function() {
+      function submitForm() {
         const input = inputText.value;
         const matches = input.match(/\(([^)]+)\)/g);
 
@@ -101,7 +103,7 @@
 //            inputText.value = updatedText;
           });
         }
-      });
+      };
     </script>
   </body>
 </html>
