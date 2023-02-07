@@ -61,7 +61,6 @@
             textbox.type = "text";
             textbox.classList.add("parenthesis-textbox");
             textbox.placeholder = strippedMatch;
-//            document.body.appendChild(newSubmitButton);
             document.querySelector("#output").appendChild(textbox);
           }
 
@@ -83,7 +82,13 @@
                 textboxValue
               );
             }
-            inputText.value = updatedText;
+            const endtextbox = document.createElement("textarea");
+            endtextbox.type = "text";
+            endtextbox.classList.add("end-textbox");
+            endtextbox.value = updatedText;
+            document.querySelector("#output").appendChild(endtextbox);
+            
+//            inputText.value = updatedText;
           });
         }
       });
