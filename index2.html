@@ -57,7 +57,7 @@
         if (matches) {
           for (let i = 0; i < matches.length; i++) {
             const strippedMatch = matches[i].slice(1, -1);
-            const textbox = document.createElement("input");
+            const textbox = document.createElement("textarea");
             textbox.type = "text";
             textbox.classList.add("parenthesis-textbox");
             textbox.placeholder = strippedMatch;
