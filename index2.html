@@ -30,7 +30,7 @@
         margin: 20px auto;
         width: 20%;
       }
-      input[type=submit]:hover {
+      input:hover {
         background-color: darkgreen;
       }
       .output {
@@ -76,11 +76,13 @@
             document.querySelector("#output").appendChild(textbox);
           }
 
-          const newSubmitButton = document.createElement("button");
-          newSubmitButton.innerText = "Update Text";
+          const newSubmitButton = document.createElement("input");
+          newSubmitButton.value = "Update Text";
+          newSubmitButton.onclick = "Generate";
+          newSubmitButton.type = "generate";
           newSubmitButton.style.marginTop = "20px";
           newSubmitButton.style.marginBottom = "20px";
-          document.body.appendChild(newSubmitButton);
+          document.querySelector("#output").appendChild(newSubmitButton);
 
           newSubmitButton.addEventListener("click", function() {
             let updatedText = input;
