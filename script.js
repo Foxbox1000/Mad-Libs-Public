@@ -12,8 +12,8 @@ while (numberArray.includes(randomNumber)) {
 };
 // Get the current value of the item from local storage
 var currentValue = localStorage.getItem("lastViewedItem");
-localStorage.setItem("lastViewedItem", currentValue + "," + randomFiltered.toString());
 setTimeout(function() {
+  localStorage.setItem("lastViewedItem", currentValue + "," + randomFiltered.toString());
   const input = database[randomFiltered];
   function getResults() {
     let updatedText = input;
