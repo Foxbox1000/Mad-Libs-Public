@@ -76,6 +76,7 @@
     <div id="generated" class="generated"></div>
     <script>
       let randomNumber = Math.floor(Math.random() * 4) + 1;
+      localStorage.setItem("lastViewedItem", "spacer");
       const numbers = localStorage.getItem("lastViewedItem");
       let numberArray = numbers.split(",");
       while (numberArray.includes(randomNumber)) {
@@ -84,7 +85,7 @@
       // Get the current value of the item from local storage
       var currentValue = localStorage.getItem("lastViewedItem");
 
-      if (localStorage.getItem("lastViewedItem") == null) {
+      if (localStorage.getItem("lastViewedItem") == "null") {
         localStorage.setItem("lastViewedItem", randomNumber.toString());
       } else {
         localStorage.setItem("lastViewedItem", currentValue + "," + randomNumber.toString());
