@@ -1,5 +1,5 @@
 let randomNumber = Math.floor(Math.random() * 4) + 1;
-if (localStorage.getItem("lastViewedItem")) {
+if (localStorage.getItem("lastViewedItem") == null) {
   localStorage.setItem("lastViewedItem", "spacer");
 };
 var numberlists = localStorage.getItem("lastViewedItem");
