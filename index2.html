@@ -81,29 +81,28 @@
           textbox.placeholder = strippedMatch;
           document.querySelector("#output").appendChild(textbox);
         }
-
-        function getResults() {
-          let updatedText = input;
-          const parenthesisTextboxes = document.getElementsByClassName(
-            "parenthesis-textbox"
+      };
+	  function getResults() {
+        let updatedText = input;
+        const parenthesisTextboxes = document.getElementsByClassName(
+          "parenthesis-textbox"
+        );
+        for (let i = 0; i < parenthesisTextboxes.length; i++) {
+          const textboxValue = parenthesisTextboxes[i].value;
+          updatedText = updatedText.replace(
+            `(${matches[i].slice(1, -1)})`,
+            textboxValue
           );
-          for (let i = 0; i < parenthesisTextboxes.length; i++) {
-            const textboxValue = parenthesisTextboxes[i].value;
-            updatedText = updatedText.replace(
-              `(${matches[i].slice(1, -1)})`,
-              textboxValue
-            );
-          }
-          const endtextbox = document.createElement("textarea");
-          endtextbox.type = "submit";
-          endtextbox.classList.add("end-textbox");
-          endtextbox.value = updatedText;
-          document.querySelector("#generated").appendChild(endtextbox);
+        }
+        const endtextbox = document.createElement("textarea");
+        endtextbox.type = "submit";
+        endtextbox.classList.add("end-textbox");
+        endtextbox.value = updatedText;
+        document.querySelector("#generated").appendChild(endtextbox);
             
-//            inputText.value = updatedText;
+//          inputText.value = updatedText;
           };
         }
-      };
     </script>
   </body>
 </html>
