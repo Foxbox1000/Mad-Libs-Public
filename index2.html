@@ -15,7 +15,7 @@
         font-size: 16px;
         overflow: hidden;
         resize: none;
-	color: white;
+        color: white;
       }
       input {
         background-color: green;
@@ -35,7 +35,7 @@
         width: 100%;
         text-align: center;
         margin: 20px auto;
-	color: white;
+        color: white;
       }
       .generate {
         width: 100%;
@@ -79,7 +79,8 @@
       while (numberArray.includes(randomNumber)) {
         randomNumber = Math.floor(Math.random() * 4);
       };
-      setTimeout(() => const input = database[randomNumber], 500);
+//      setTimeout(() => const input = database[randomNumber], 500);
+      setTimeout(function() { const input = database[randomNumber] }, 500);
       const matches = input.match(/\(([^)]+)\)/g);
       if (matches) {
         for (let i = 0; i < matches.length; i++) {
