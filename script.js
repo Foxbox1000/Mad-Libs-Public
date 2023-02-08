@@ -4,13 +4,15 @@ if (localStorage.getItem("lastViewedItem") == null) {
 };
 var numberlists = localStorage.getItem("lastViewedItem");
 let numberArray = numberlists.split(",");
-while (numberArray.includes(randomNumber)) {
+while (numberArray.includes(randomFiltered)) {
   let randomNumber = Math.floor(Math.random() * 4) + 1;
+  if (!numberArray.includes(randomNumber)) {
+    let randomFiltered = randomNumber
 };
 // Get the current value of the item from local storage
 var currentValue = localStorage.getItem("lastViewedItem");
-localStorage.setItem("lastViewedItem", currentValue + "," + randomNumber.toString());
-const input = database[randomNumber];
+localStorage.setItem("lastViewedItem", currentValue + "," + randomFiltered.toString());
+const input = database[randomFiltered];
 function getResults() {
   let updatedText = input;
   const parenthesisTextboxes = document.getElementsByClassName(
