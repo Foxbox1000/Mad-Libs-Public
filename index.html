@@ -119,10 +119,14 @@
         console.log("No match found");
       };
       // Get the item that was viewed
-      var item = "item1";
+      // Get the current value of the item from local storage
+      var currentValue = parseInt(localStorage.getItem("lastViewedItem")) || 0;
 
-      // Store the item in local storage
-      localStorage.setItem("lastViewedItem", item);
+      // Add 7 to the current value
+      var newValue = currentValue + ",7";
+
+      // Store the new value in local storage
+      localStorage.setItem("lastViewedItem", newValue);
     </script>
   </body>
 </html>
