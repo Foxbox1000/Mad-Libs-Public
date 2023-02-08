@@ -6,11 +6,6 @@
         color: white;
         font-family: Arial, sans-serif;
       }
-      .container {
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-      }
       .parenthesis-textbox {
         width: 80%;
         height: 40px;
@@ -64,59 +59,46 @@
     </style>
   </head>
   <body style="background-color: #1a1a1a;">
-    <div id="input" class="input" style="text-align: center;">
+    <div style="text-align: center;">
       <img src="logo.png" height="500">
       <h2>Text Input</h2>
-      <textarea id="input-text" rows="10" cols="100" style="font-size: 24px;"></textarea>
       <br>
-      <input type="submit" value="Generate Mad Lib" onclick="submitForm()">
     </div>
     <div id="output" class="output"></div>
-    <div id="generate" class="generate"></div>
+    <div id="generate" class="generate">
+	  <input type="submit" value="Generate" onclick="getResults()">
+	</div>
     <div id="generated" class="generated"></div>
     <script>
-      const inputText = document.getElementById("input-text");
+      const input = "insert database variable";
+      const matches = input.match(/\(([^)]+)\)/g);
+      if (matches) {
+        for (let i = 0; i < matches.length; i++) {
+          const strippedMatch = matches[i].slice(1, -1);
+          const textbox = document.createElement("textarea");
+          textbox.type = "text";
+          textbox.classList.add("parenthesis-textbox");
+          textbox.placeholder = strippedMatch;
+          document.querySelector("#output").appendChild(textbox);
+        }
 
-      function submitForm() {
-        const input = inputText.value;
-        const matches = input.match(/\(([^)]+)\)/g);
-
-        if (matches) {
-          for (let i = 0; i < matches.length; i++) {
-            const strippedMatch = matches[i].slice(1, -1);
-            const textbox = document.createElement("textarea");
-            textbox.type = "text";
-            textbox.classList.add("parenthesis-textbox");
-            textbox.placeholder = strippedMatch;
-            document.querySelector("#output").appendChild(textbox);
-          }
-
-          const newSubmitButton = document.createElement("input");
-          newSubmitButton.type = "generate";
-          newSubmitButton.value = "Update Text";
-          newSubmitButton.onclick = "generate()";
-          newSubmitButton.readonly;
-          newSubmitButton.style.marginTop = "20px";
-          newSubmitButton.style.marginBottom = "20px";
-          document.querySelector("#generate").appendChild(newSubmitButton);
-
-          function generate() {
-            let updatedText = input;
-            const parenthesisTextboxes = document.getElementsByClassName(
-              "parenthesis-textbox"
+        function getResults() {
+          let updatedText = input;
+          const parenthesisTextboxes = document.getElementsByClassName(
+            "parenthesis-textbox"
+          );
+          for (let i = 0; i < parenthesisTextboxes.length; i++) {
+            const textboxValue = parenthesisTextboxes[i].value;
+            updatedText = updatedText.replace(
+              `(${matches[i].slice(1, -1)})`,
+              textboxValue
             );
-            for (let i = 0; i < parenthesisTextboxes.length; i++) {
-              const textboxValue = parenthesisTextboxes[i].value;
-              updatedText = updatedText.replace(
-                `(${matches[i].slice(1, -1)})`,
-                textboxValue
-              );
-            }
-            const endtextbox = document.createElement("textarea");
-            endtextbox.type = "submit";
-            endtextbox.classList.add("end-textbox");
-            endtextbox.value = updatedText;
-            document.querySelector("#generated").appendChild(endtextbox);
+          }
+          const endtextbox = document.createElement("textarea");
+          endtextbox.type = "submit";
+          endtextbox.classList.add("end-textbox");
+          endtextbox.value = updatedText;
+          document.querySelector("#generated").appendChild(endtextbox);
             
 //            inputText.value = updatedText;
           };
