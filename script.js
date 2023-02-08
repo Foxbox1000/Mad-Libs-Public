@@ -4,7 +4,7 @@ if (localStorage.getItem("lastViewedItem") == null) {
 };
 var numberlists = localStorage.getItem("lastViewedItem");
 let numberArray = numberlists.split(",");
-while (numberArray.includes(randomFiltered)) {
+while (numberArray.includes(randomNumber)) {
   let randomNumber = Math.floor(Math.random() * 4) + 1;
   if (!numberArray.includes(randomNumber)) {
     let randomFiltered = randomNumber
