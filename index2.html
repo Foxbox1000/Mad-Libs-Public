@@ -107,7 +107,22 @@
         document.querySelector("#generated").appendChild(endtextbox);
             
 //          inputText.value = updatedText;
-      }
+      };
+      var numbers = "1,2,3,4,5";
+      var read = 4;
+
+      var numberArray = numbers.split(",");
+
+      if (numberArray.includes(read.toString())) {
+        console.log("Match found");
+      } else {
+        console.log("No match found");
+      };
+      // Get the item that was viewed
+      var item = "item1";
+
+      // Store the item in local storage
+      localStorage.setItem("lastViewedItem", item);
     </script>
   </body>
 </html>
