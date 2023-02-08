@@ -93,7 +93,7 @@
         randomNumber = Math.floor(Math.random() * 4);
       };
 //      setTimeout(() => const input = database[randomNumber], 500);
-      setTimeout(function() { const input = database[randomNumber] }, 500);
+      const input = database[randomNumber];
       function getResults() {
         let updatedText = input;
         const parenthesisTextboxes = document.getElementsByClassName(
