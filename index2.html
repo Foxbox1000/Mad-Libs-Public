@@ -105,6 +105,11 @@
             `(${matches[i].slice(1, -1)})`, textboxValue
           );
         };
+	const endtextbox = document.createElement("textarea");
+        endtextbox.type = "submit";
+        endtextbox.classList.add("end-textbox");
+        endtextbox.value = updatedText;
+        document.querySelector("#generated").appendChild(endtextbox);
       };
       const matches = input.match(/\(([^)]+)\)/g);
       if (matches) {
@@ -116,12 +121,6 @@
           textbox.placeholder = strippedMatch;
           document.querySelector("#output").appendChild(textbox);
         }
-      };
-        const endtextbox = document.createElement("textarea");
-        endtextbox.type = "submit";
-        endtextbox.classList.add("end-textbox");
-        endtextbox.value = updatedText;
-        document.querySelector("#generated").appendChild(endtextbox);
       };
     </script>
   </body>
