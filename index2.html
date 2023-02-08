@@ -121,8 +121,11 @@
       // Get the current value of the item from local storage
       var currentValue = localStorage.getItem("lastViewedItem");
 
-      // Add 7 to the current value
-      var newValue = currentValue + "," + random;
+      if (localStorage.getItem("lastViewedItem") == null) {
+        var newValue = "," + random;
+      } else {
+        var newValue = currentValue + "," + random;
+      };
 
       // Store the new value in local storage
       localStorage.setItem("lastViewedItem", newValue);
