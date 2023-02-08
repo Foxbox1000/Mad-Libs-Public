@@ -2,7 +2,7 @@ let randomNumber = Math.floor(Math.random() * 4) + 1;
 if (localStorage.getItem("lastViewedItem") == "null") {
   localStorage.setItem("lastViewedItem", "spacer");
 };
-const numbers = localStorage.getItem("lastViewedItem");
+let numbers = localStorage.getItem("lastViewedItem");
 let numberArray = numbers.split(",");
 while (numberArray.includes(randomNumber)) {
   let randomNumber = Math.floor(Math.random() * 4) + 1;
