@@ -2,8 +2,8 @@ let randomNumber = Math.floor(Math.random() * 4) + 1;
 if (localStorage.getItem("lastViewedItem") == "null") {
   localStorage.setItem("lastViewedItem", "spacer");
 };
-let numbers = localStorage.getItem("lastViewedItem");
-let numberArray = numbers.split(",");
+let numberlists = localStorage.getItem("lastViewedItem");
+let numberArray = numberlists.split(",");
 while (numberArray.includes(randomNumber)) {
   let randomNumber = Math.floor(Math.random() * 4) + 1;
 };
