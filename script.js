@@ -8,6 +8,7 @@ while (numberArray.includes(randomNumber)) {
   let randomNumber = Math.floor(Math.random() * 4) + 1;
   if (!numberArray.includes(randomNumber)) {
     let randomFiltered = randomNumber
+  };
 };
 // Get the current value of the item from local storage
 var currentValue = localStorage.getItem("lastViewedItem");
