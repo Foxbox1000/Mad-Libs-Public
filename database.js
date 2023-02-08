@@ -1,4 +1,5 @@
 let database = [];
+database.push("spacer");
 database.push("It was a dark and (adjective) night. The (noun) was (verb) by the candle light. Slowly a (noun) came (adverb) out of the (noun). (adverb) it (verb) towards the (noun). Then the candle went (adjective) on the (noun).");
 database.push("It was a dark and (adjective) night. It was rainy and (adjective). There was a white (noun). In that white (noun), there was a cannibal. In that cannibal, there was a (noun). The (noun) got out a chainsaw and cut open the man’s (part of body). He laughed (adjective), for he had won the bet if he cut open (part of body) from inside  the man.");
 database.push("It was a dark and (adjective) night. I was (verb) through the snow. The snow was (adjective) and soft. My brother was (verb) stew. My (Noun) was (adjective) in the house and (adjective) with my pet Rhino. My Rhinos name is (name).");
