@@ -24,12 +24,11 @@ function getResults() {
       `(${matches[i].slice(1, -1)})`, textboxValue
     );
   };
-	const endtextbox = document.createElement("textarea");
-    endtextbox.type = "submit";
-    endtextbox.classList.add("end-textbox");
-    endtextbox.value = updatedText;
-    document.querySelector("#generated").appendChild(endtextbox);
-  };
+  const endtextbox = document.createElement("textarea");
+  endtextbox.type = "submit";
+  endtextbox.classList.add("end-textbox");
+  endtextbox.value = updatedText;
+  document.querySelector("#generated").appendChild(endtextbox);
   const matches = input.match(/\(([^)]+)\)/g);
   if (matches) {
     for (let i = 0; i < matches.length; i++) {
