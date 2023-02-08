@@ -76,7 +76,7 @@
     <div id="generated" class="generated"></div>
     <script>
       let randomNumber = Math.floor(Math.random() * 4);
-      while (numberArray.includes(randomNumber)) {
+      while (numberArray.indexOf(randomNumber) !== -1) {
         randomNumber = Math.floor(Math.random() * 4);
       };
 //      setTimeout(() => const input = database[randomNumber], 500);
