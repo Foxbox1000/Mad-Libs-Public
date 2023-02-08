@@ -39,4 +39,3 @@ function getResults() {
       document.querySelector("#output").appendChild(textbox);
     }
   }
-};
