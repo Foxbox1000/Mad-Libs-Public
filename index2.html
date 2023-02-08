@@ -75,8 +75,11 @@
 	</div>
     <div id="generated" class="generated"></div>
     <script>
-      const random = Math.floor(Math.random() * 4);
-      const input = database[random];
+      let randomNumber = Math.floor(Math.random() * 4);
+      while (numberArray.includes(randomNumber)) {
+        randomNumber = Math.floor(Math.random() * 4);
+      };
+      const input = database[randomFiltered];
       const matches = input.match(/\(([^)]+)\)/g);
       if (matches) {
         for (let i = 0; i < matches.length; i++) {
@@ -122,9 +125,9 @@
       var currentValue = localStorage.getItem("lastViewedItem");
 
       if (localStorage.getItem("lastViewedItem") == null) {
-        var newValue = random;
+        var newValue = randomFiltered;
       } else {
-        var newValue = currentValue + "," + random;
+        var newValue = currentValue + "," + randomFiltered;
       };
 
       // Store the new value in local storage
