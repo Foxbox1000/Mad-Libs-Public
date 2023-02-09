@@ -5,7 +5,8 @@ if (localStorage.getItem("lastViewedItem") == null) {
 function generateRandomNumber() {
   var randomNum = Math.floor(Math.random() * 4) + 1;
   let numberlists = localStorage.getItem("lastViewedItem");
-  let numberArray = numberlists.split(",");
+  let textArray = numberlists.split(",");
+  let numberArray = textArray.map(Number);
   while (numberArray.includes(randomNum)) {
     randomNum = Math.floor(Math.random() * 4) + 1;
   }
