@@ -16,12 +16,6 @@ let updatedText = input;
 const parenthesisTextboxes = document.getElementsByClassName(
   "parenthesis-textbox"
 );
-for (let i = 0; i < parenthesisTextboxes.length; i++) {
-  const textboxValue = parenthesisTextboxes[i].value;
-  updatedText = updatedText.replace(
-    `(${matches[i].slice(1, -1)})`, textboxValue
-  );
-};
 const matches = input.match(/\(([^)]+)\)/g);
 if (matches) {
   for (let i = 0; i < matches.length; i++) {
@@ -39,4 +33,10 @@ function getResults() {
   endtextbox.classList.add("end-textbox");
   endtextbox.value = updatedText;
   document.querySelector("#generated").appendChild(endtextbox);
+  for (let i = 0; i < parenthesisTextboxes.length; i++) {
+  const textboxValue = parenthesisTextboxes[i].value;
+  updatedText = updatedText.replace(
+    `(${matches[i].slice(1, -1)})`, textboxValue
+  );
+};
 }
