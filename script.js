@@ -1,15 +1,19 @@
-let randomNumber = Math.floor(Math.random() * 4) + 1;
 var numberlists = localStorage.getItem("lastViewedItem");
 let numberArray = numberlists.split(",");
-while (numberArray.includes(randomNumber)) {
-  randomNumber = Math.floor(Math.random() * 4) + 1;
-};
 if (localStorage.getItem("lastViewedItem") == null) {
   localStorage.setItem("lastViewedItem", "spacer");
 };
-if (!numberArray.includes(randomNumber)) {
-  localStorage.setItem("currentItem", randomNumber);
-};
+
+function generateRandomNumber() {
+  var randomNum = Math.floor(Math.random() * 4) + 1;
+  while (numberArray.includes(randomNum)) {
+    randomNum = Math.floor(Math.random() * 4) + 1;
+  }
+  numberArray.push(randomNum);
+  return randomNumber;
+}
+var randomNumber = generateRandomNumber();
+
 let randomFiltered = localStorage.getItem("currentItem")
 //let randomFiltered = randomNumber
 // Get the current value of the item from local storage
