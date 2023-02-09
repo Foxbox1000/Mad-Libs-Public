@@ -12,7 +12,7 @@ if (localStorage.getItem("totalViews") == database.length) {
     localStorage.setItem("totalViews", 0);
   }, 400);
 };
-localStorage.setItem("totalViews", localStorage.getItem("totalViews") + 1) 
+localStorage.setItem("totalViews", parseInt(localStorage.getItem("totalViews")) + 1) 
 
 function generateRandomNumber() {
   var randomNum = Math.floor(Math.random() * 4) + 1;
