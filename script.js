@@ -10,7 +10,7 @@ function generateRandomNumber() {
     randomNum = Math.floor(Math.random() * 4) + 1;
   }
   numberArray.push(randomNum);
-  return randomNumber;
+  return randomNum;
 }
 var randomNumber = generateRandomNumber();
 
