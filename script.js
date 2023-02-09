@@ -2,11 +2,10 @@ if (localStorage.getItem("lastViewedItem") == null) {
   localStorage.setItem("lastViewedItem", 0);
 };
 
-let numberlists = localStorage.getItem("lastViewedItem");
-let textArray = numberlists.split(",");
-let numberArray = Number(textArray);
 function generateRandomNumber() {
   var randomNum = Math.floor(Math.random() * 4) + 1;
+  let numberlists = localStorage.getItem("lastViewedItem");
+  let numberArray = numberlists.split(",");
   while (numberArray.includes(randomNum)) {
     randomNum = Math.floor(Math.random() * 4) + 1;
   }
