@@ -1,14 +1,14 @@
 let randomNumber = Math.floor(Math.random() * 4) + 1;
+while (numberArray.includes(randomNumber)) {
+  randomNumber = Math.floor(Math.random() * 4) + 1;
+};
 if (localStorage.getItem("lastViewedItem") == null) {
   localStorage.setItem("lastViewedItem", "spacer");
 };
 var numberlists = localStorage.getItem("lastViewedItem");
 let numberArray = numberlists.split(",");
-while (numberArray.includes(randomNumber)) {
-  randomNumber = Math.floor(Math.random() * 4) + 1;
-  if (!numberArray.includes(randomNumber)) {
-    localStorage.setItem("currentItem", randomNumber);
-  };
+if (!numberArray.includes(randomNumber)) {
+  localStorage.setItem("currentItem", randomNumber);
 };
 let randomFiltered = localStorage.getItem("currentItem")
 //let randomFiltered = randomNumber
