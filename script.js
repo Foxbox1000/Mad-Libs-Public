@@ -14,12 +14,10 @@ function generateRandomNumber() {
 }
 var randomNumber = generateRandomNumber();
 
-let randomFiltered = localStorage.getItem("currentItem")
-//let randomFiltered = randomNumber
 // Get the current value of the item from local storage
 var currentValue = localStorage.getItem("lastViewedItem");
-localStorage.setItem("lastViewedItem", currentValue + "," + randomFiltered.toString());
-const input = database[randomFiltered];
+localStorage.setItem("lastViewedItem", currentValue + "," + randomNumber.toString());
+const input = database[randomNumber];
 let updatedText = input;
 const parenthesisTextboxes = document.getElementsByClassName(
   "parenthesis-textbox"
