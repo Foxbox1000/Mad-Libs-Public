@@ -7,7 +7,7 @@ let numberArray = numberlists.split(",");
 while (numberArray.includes(randomNumber)) {
   let randomNumber = Math.floor(Math.random() * 4) + 1;
   if (!numberArray.includes(randomNumber)) {
-    let window.randomFiltered = randomNumber;
+    window.randomFiltered = randomNumber;
   };
 };
 //let randomFiltered = randomNumber
