@@ -1,12 +1,12 @@
 let randomNumber = Math.floor(Math.random() * 4) + 1;
+var numberlists = localStorage.getItem("lastViewedItem");
+let numberArray = numberlists.split(",");
 while (numberArray.includes(randomNumber)) {
   randomNumber = Math.floor(Math.random() * 4) + 1;
 };
 if (localStorage.getItem("lastViewedItem") == null) {
   localStorage.setItem("lastViewedItem", "spacer");
 };
-var numberlists = localStorage.getItem("lastViewedItem");
-let numberArray = numberlists.split(",");
 if (!numberArray.includes(randomNumber)) {
   localStorage.setItem("currentItem", randomNumber);
 };
