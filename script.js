@@ -1,5 +1,5 @@
 if (localStorage.getItem("lastViewedItem") == null) {
-  localStorage.setItem("lastViewedItem", "0");
+  localStorage.setItem("lastViewedItem", 0);
 };
 
 function generateRandomNumber() {
