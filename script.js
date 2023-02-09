@@ -10,11 +10,12 @@ while (numberArray.includes(randomNumber)) {
     window.randomFiltered = randomNumber;
   };
 };
+let randomFiltered = window.randomFiltered
 //let randomFiltered = randomNumber
 // Get the current value of the item from local storage
 var currentValue = localStorage.getItem("lastViewedItem");
-localStorage.setItem("lastViewedItem", currentValue + "," + window.randomFiltered.toString());
-const input = database[window.randomFiltered];
+localStorage.setItem("lastViewedItem", currentValue + "," + randomFiltered.toString());
+const input = database[randomFiltered];
 let updatedText = input;
 const parenthesisTextboxes = document.getElementsByClassName(
   "parenthesis-textbox"
