@@ -2,6 +2,10 @@ if (localStorage.getItem("lastViewedItem") == null) {
   localStorage.setItem("lastViewedItem", 0);
 };
 
+if (localStorage.getItem("totalViews") == null) {
+  localStorage.setItem("totalViews", 0);
+};
+
 if (localStorage.getItem("totalViews") == database.length) {
   setTimeout(function() {
     localStorage.setItem("lastViewedItem", 0);
