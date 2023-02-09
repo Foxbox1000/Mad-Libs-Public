@@ -1,8 +1,8 @@
-var numberlists = localStorage.getItem("lastViewedItem");
-let numberArray = numberlists.split(",");
 if (localStorage.getItem("lastViewedItem") == null) {
   localStorage.setItem("lastViewedItem", "spacer");
 };
+var numberlists = localStorage.getItem("lastViewedItem");
+let numberArray = numberlists.split(",");
 
 function generateRandomNumber() {
   var randomNum = Math.floor(Math.random() * 4) + 1;
