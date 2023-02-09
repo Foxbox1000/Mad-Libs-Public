@@ -7,10 +7,10 @@ let numberArray = numberlists.split(",");
 while (numberArray.includes(randomNumber)) {
   let randomNumber = Math.floor(Math.random() * 4) + 1;
   if (!numberArray.includes(randomNumber)) {
-    window.randomFiltered = randomNumber;
+    localStorage.setItem("currentItem", randomNumber);
   };
 };
-let randomFiltered = window.randomFiltered
+let randomFiltered = localStorage.getItem("currentItem")
 //let randomFiltered = randomNumber
 // Get the current value of the item from local storage
 var currentValue = localStorage.getItem("lastViewedItem");
