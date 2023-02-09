@@ -6,13 +6,13 @@ if (localStorage.getItem("totalViews") == null) {
   localStorage.setItem("totalViews", 0);
 };
 
+localStorage.setItem("totalViews", parseInt(localStorage.getItem("totalViews")) + 1) 
 if (localStorage.getItem("totalViews") == database.length - 1) {
   setTimeout(function() {
     localStorage.setItem("lastViewedItem", 0);
     localStorage.setItem("totalViews", 0);
   }, 400);
 };
-localStorage.setItem("totalViews", parseInt(localStorage.getItem("totalViews")) + 1) 
 
 function generateRandomNumber() {
   var randomNum = Math.floor(Math.random() * 4) + 1;
