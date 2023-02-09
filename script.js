@@ -36,7 +36,8 @@ function getResults() {
   for (let i = 0; i < parenthesisTextboxes.length; i++) {
     const textboxValue = parenthesisTextboxes[i].value;
     updatedText = updatedText.replace(
-      `(${matches[i].slice(1, -1)})`, textboxValue
+      `(${matches[i].slice(1, -1)})`, 
+      textboxValue
     );
   };
 }
