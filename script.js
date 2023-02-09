@@ -1,15 +1,14 @@
 if (localStorage.getItem("lastViewedItem") == null) {
   localStorage.setItem("lastViewedItem", "0");
 };
-var numberlists = localStorage.getItem("lastViewedItem");
-let numberArray = numberlists.split(",");
 
 function generateRandomNumber() {
+  var numberlists = localStorage.getItem("lastViewedItem");
+  let numberArray = numberlists.split(",");
   var randomNum = Math.floor(Math.random() * 4) + 1;
   while (numberArray.includes(randomNum)) {
     randomNum = Math.floor(Math.random() * 4) + 1;
   }
-  numberArray.push(randomNum);
   return randomNum;
 }
 var randomNumber = generateRandomNumber();
