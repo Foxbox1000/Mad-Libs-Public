@@ -2,6 +2,14 @@ if (localStorage.getItem("lastViewedItem") == null) {
   localStorage.setItem("lastViewedItem", 0);
 };
 
+if (localStorage.getItem("totalViews") == database.length) {
+  setTimeout(function() {
+    localStorage.setItem("lastViewedItem", 0);
+    localStorage.setItem("totalViews", 0);
+  }, 400);
+};
+localStorage.setItem("totalViews", localStorage.getItem("totalViews") + 1) 
+
 function generateRandomNumber() {
   var randomNum = Math.floor(Math.random() * 4) + 1;
   let numberlists = localStorage.getItem("lastViewedItem");
