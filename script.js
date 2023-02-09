@@ -1,5 +1,5 @@
 if (localStorage.getItem("lastViewedItem") == null) {
-  localStorage.setItem("lastViewedItem", "spacer");
+  localStorage.setItem("lastViewedItem", "0");
 };
 var numberlists = localStorage.getItem("lastViewedItem");
 let numberArray = numberlists.split(",");
