@@ -30,7 +30,7 @@ function scrollToMiddle() {
   if (document.body.scrollHeight - window.innerHeight > 600) {
     var targetY = 600;
   } else {
-    var targetY = 600 - document.body.scrollHeight - window.innerHeight;
+    var targetY = document.body.scrollHeight - window.innerHeight;
   };
   let animating = true;
   function stepMiddle() {
