@@ -45,12 +45,18 @@ function scrollToMiddle() {
 }
 setTimeout(scrollToMiddle, 800);
 function getResults() {
+  let generateButton = document.querySelector("#generateButton");
   for (let i = 0; i < parenthesisTextboxes.length; i++) {
     const textboxValue = parenthesisTextboxes[i].value;
     updatedText = updatedText.replace(
       `(${matches[i].slice(1, -1)})`, textboxValue
     );
   };
+  document.querySelector("#generated").appendChild(document.createElement("br"));
+  document.querySelector("#generated").appendChild(document.createElement("br"));
+  document.querySelector("#generated").appendChild(document.createElement("br"));
+  document.querySelector("#generated").appendChild(document.createElement("br"));
+  document.querySelector("#generated").appendChild(document.createElement("br"));
   const endtextbox = document.createElement("textarea");
   endtextbox.type = "text";
   endtextbox.classList.add("end-textbox");
