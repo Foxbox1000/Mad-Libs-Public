@@ -26,6 +26,8 @@ function generateRandomNumber() {
 }
 var randomNumber = generateRandomNumber();
 
+var madNumber = document.getElementById("madNumber");
+madNumber.innerHTML = "Mad Lib number: " + randomNumber.toString();
 // Get the current value of the item from local storage
 var currentValue = localStorage.getItem("lastViewedItem");
 localStorage.setItem("lastViewedItem", currentValue + "," + randomNumber.toString());
