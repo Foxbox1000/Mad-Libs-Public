@@ -25,6 +25,8 @@ function generateRandomNumber() {
   return randomNum;
 };
 
+window.scrollTo(0,document.body.scrollHeight);
+
 var randomNumber = generateRandomNumber();
 var madNumber = document.getElementById("madNumber");
 madNumber.innerHTML = "Mad Lib number: " + randomNumber.toString();
