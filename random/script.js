@@ -83,5 +83,5 @@ function getResults() {
     }
     window.requestAnimationFrame(step);
   }
-  setTimeout(scrollToBottom, 500);
+  setTimeout(scrollToBottom, 250);
 };
