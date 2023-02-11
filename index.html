@@ -15,7 +15,7 @@
         font-size: 16px;
         overflow: hidden;
         resize: none;
-	color: white;
+        color: white;
       }
       input {
         background-color: green;
@@ -35,7 +35,7 @@
         width: 100%;
         text-align: center;
         margin: 20px auto;
-	color: white;
+        color: white;
       }
       .generate {
         width: 100%;
@@ -74,59 +74,6 @@
 	  <input type="submit" value="Generate" onclick="getResults()">
 	</div>
     <div id="generated" class="generated"></div>
-    <script>
-      const random = Math.floor(Math.random() * 4);
-      const input = database[random];
-      const matches = input.match(/\(([^)]+)\)/g);
-      if (matches) {
-        for (let i = 0; i < matches.length; i++) {
-          const strippedMatch = matches[i].slice(1, -1);
-          const textbox = document.createElement("textarea");
-          textbox.type = "text";
-          textbox.classList.add("parenthesis-textbox");
-          textbox.placeholder = strippedMatch;
-          document.querySelector("#output").appendChild(textbox);
-        }
-      };
-      function getResults() {
-        let updatedText = input;
-        const parenthesisTextboxes = document.getElementsByClassName(
-          "parenthesis-textbox"
-        );
-        for (let i = 0; i < parenthesisTextboxes.length; i++) {
-          const textboxValue = parenthesisTextboxes[i].value;
-          updatedText = updatedText.replace(
-            `(${matches[i].slice(1, -1)})`,
-            textboxValue
-          );
-        };
-        const endtextbox = document.createElement("textarea");
-        endtextbox.type = "submit";
-        endtextbox.classList.add("end-textbox");
-        endtextbox.value = updatedText;
-        document.querySelector("#generated").appendChild(endtextbox);
-            
-//          inputText.value = updatedText;
-      };
-      var numbers = "1,2,3,4,5";
-      var read = 4;
-
-      var numberArray = numbers.split(",");
-
-      if (numberArray.includes(read.toString())) {
-        console.log("Match found");
-      } else {
-        console.log("No match found");
-      };
-      // Get the item that was viewed
-      // Get the current value of the item from local storage
-      var currentValue = parseInt(localStorage.getItem("lastViewedItem")) || 0;
-
-      // Add 7 to the current value
-      var newValue = currentValue + ",7";
-
-      // Store the new value in local storage
-      localStorage.setItem("lastViewedItem", newValue);
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
