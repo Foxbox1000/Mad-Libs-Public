@@ -28,9 +28,9 @@ function generateRandomNumber() {
 function scrollToMiddle() {
   let currentY = window.pageYOffset;
   if (document.body.scrollHeight - window.innerHeight > 600) {
-    let targetY = 600;
+    var targetY = 600;
   } else {
-    let targetY = 600 - document.body.scrollHeight - window.innerHeight;
+    var targetY = 600 - document.body.scrollHeight - window.innerHeight;
   };
   let animating = true;
   function stepMiddle() {
