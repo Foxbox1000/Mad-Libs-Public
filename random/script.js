@@ -81,7 +81,6 @@ function getResults() {
         animating = false;
       }
     }
-    window.requestAnimationFrame(step);
   }
   setTimeout(scrollToBottom, 500);
 };
