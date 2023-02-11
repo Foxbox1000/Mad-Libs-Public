@@ -68,7 +68,7 @@
       }
       function selected() {
         let selectedInput = document.querySelector("#selectedInput")
-        localStorage.setItem("selectedLib", Number(selectedInput));
+        localStorage.setItem("selectedLib", Number(selectedInput.value));
         window.location = "https://madlibs.triangledayschool.com/selected/";
       }
     </script>
