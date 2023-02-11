@@ -24,8 +24,8 @@ if (matches) {
 };
 function scrollToMiddle() {
   let currentY = window.pageYOffset;
-  if (document.body.scrollHeight - window.innerHeight > 600) {
-    var targetY = 600;
+  if (document.body.scrollHeight - window.innerHeight > 847) {
+    var targetY = 847;
   } else {
     var targetY = document.body.scrollHeight - window.innerHeight;
   };
