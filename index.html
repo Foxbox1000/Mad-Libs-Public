@@ -1,21 +1,9 @@
 <html>
   <head>
-    <script src="database.js"></script>
     <style>
       body {
         color: white;
         font-family: Arial, sans-serif;
-      }
-      .parenthesis-textbox {
-        width: 80%;
-        height: 40px;
-        padding: 10px;
-        background-color: rgba(255, 255, 255, 0.1);
-        margin-bottom: 10px;
-        font-size: 16px;
-        overflow: hidden;
-        resize: none;
-        color: white;
       }
       input {
         background-color: green;
@@ -31,29 +19,11 @@
       input:hover {
         background-color: darkgreen;
       }
-      .output {
+      .selection {
         width: 100%;
         text-align: center;
         margin: 20px auto;
         color: white;
-      }
-      .generate {
-        width: 100%;
-        text-align: center;
-        margin: 20px auto;
-      }
-      .generated {
-        width: 100%;
-        text-align: center;
-        margin: 20px auto;
-      }
-      textarea {
-        width: 80%;
-        height: 200px;
-        font-size: 20px;
-        padding: 10px;
-        margin-bottom: 20px;
-        box-sizing: border-box;
       }
       h2 {
         margin-top: 80px;
@@ -69,11 +39,9 @@
       <br>
       <h2>Fill in the madlibs</h2>
     </div>
-    <div id="output" class="output"></div>
-    <div id="generate" class="generate">
-	  <input type="submit" value="Generate" onclick="getResults()">
-	</div>
-    <div id="generated" class="generated"></div>
+    <div id="selection" class="selection">
+      <input type="submit" value="Generate" onclick="getResults()">
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
