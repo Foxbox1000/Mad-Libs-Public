@@ -71,8 +71,8 @@ function getResults() {
     let targetY = document.body.scrollHeight - window.innerHeight;
     let animating = true;
     function step() {
-      let y = currentY + (targetY - currentY);
-      if (y <= targetY) {
+      let y = currentY + (targetY - currentY) * 0.05;
+      if (window.pageYOffset < targetY) {
         window.scrollTo(0, y);
         currentY = y;
         window.requestAnimationFrame(step);
