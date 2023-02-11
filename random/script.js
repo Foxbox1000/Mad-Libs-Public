@@ -25,34 +25,6 @@ function generateRandomNumber() {
   return randomNum;
 };
 
-
-function scrollToBottom() {
-  let currentY = window.pageYOffset;
-  let targetY = document.body.scrollHeight - window.innerHeight;
-  let animating = true;
-  function step() {
-    if (currentY >= targetY || currentY <= 0) {
-      animating = false;
-      window.removeEventListener("scroll", onScroll);
-      return;
-    }
-    let y = currentY + (targetY - currentY) * 0.05;
-    window.scrollTo(0, y);
-    currentY = y;
-    window.requestAnimationFrame(step);
-  }
-  function onScroll() {
-    if (!animating) return;
-    currentY = window.pageYOffset;
-    targetY = document.body.scrollHeight - window.innerHeight;
-  }
-  window.addEventListener("scroll", onScroll);
-  window.requestAnimationFrame(step);
-}
-setTimeout(scrollToBottom, 800);
-
-
-
 var randomNumber = generateRandomNumber();
 var madNumber = document.getElementById("madNumber");
 madNumber.innerHTML = "Mad Lib number: " + randomNumber.toString();
@@ -94,4 +66,22 @@ function getResults() {
   endtextbox.value = updatedText;
   document.querySelector("#generated").appendChild(endtextbox);
   generateButton.style.display = "none";
+  function scrollToBottom() {
+    let currentY = window.pageYOffset;
+    let targetY = document.body.scrollHeight - window.innerHeight;
+    let animating = true;
+    function step() {
+      let y = currentY + (targetY - currentY) * 0.05;
+      if (y < targetY) {
+        window.scrollTo(0, y);
+        currentY = y;
+        window.requestAnimationFrame(step);
+      } else {
+        window.scrollTo(0, targetY);
+        animating = false;
+      }
+    }
+    window.requestAnimationFrame(step);
+  }
+  setTimeout(scrollToBottom, 800);
 };
