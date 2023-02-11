@@ -72,7 +72,7 @@ function getResults() {
     let animating = true;
     function step() {
       let y = currentY + (targetY - currentY) * 0.05;
-      if (y < targetY) {
+      if (y <= targetY) {
         window.scrollTo(0, y);
         currentY = y;
         window.requestAnimationFrame(step);
