@@ -6,6 +6,14 @@ if (localStorage.getItem("totalViews") == null) {
   localStorage.setItem("totalViews", 0);
 };
 
+localStorage.setItem("totalViews", localStorage.getItem("totalViews") + 1);
+if (localStorage.getItem("totalViews") >= database.length - 1) {
+  setTimeout(function() {
+    localStorage.setItem("lastViewedItem", 0);
+    localStorage.setItem("totalViews", 0);
+  }, 40);
+};
+
 function generateRandomNumber() {
   var randomNum = Math.floor(Math.random() * 4) + 1;
   let numberlists = localStorage.getItem("lastViewedItem");
@@ -16,13 +24,7 @@ function generateRandomNumber() {
   }
   return randomNum;
 };
-localStorage.setItem("totalViews", localStorage.getItem("totalViews") + 1);
-if (localStorage.getItem("totalViews") >= database.length - 1) {
-  setTimeout(function() {
-    localStorage.setItem("lastViewedItem", 0);
-    localStorage.setItem("totalViews", 0);
-  }, 20);
-};
+
 var randomNumber = generateRandomNumber();
 
 var madNumber = document.getElementById("madNumber");
