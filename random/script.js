@@ -15,7 +15,8 @@ function generateRandomNumber() {
     randomNum = Math.floor(Math.random() * 4) + 1;
   }
   return randomNum;
-}
+};
+localStorage.setItem("totalViews", localStorage.getItem("totalViews") + 1);
 if (localStorage.getItem("totalViews") >= database.length - 1) {
   setTimeout(function() {
     localStorage.setItem("lastViewedItem", 0);
