@@ -26,6 +26,7 @@ function generateRandomNumber() {
 };
 
 window.scrollTo(0,0);
+setTimeout(window.scrollTo(0,0), 100);
 function scrollToBottom() {
   let currentY = window.pageYOffset;
   let targetY = document.body.scrollHeight - window.innerHeight;
