@@ -5,8 +5,8 @@ if (localStorage.getItem("lastViewedItem") == null) {
 if (localStorage.getItem("totalViews") == null) {
   localStorage.setItem("totalViews", 0);
 };
-
-localStorage.setItem("totalViews", localStorage.getItem("totalViews") + 1);
+let totalViews = localStorage.getItem("totalViews")
+localStorage.setItem("totalViews", Number(totalViews) + 1);
 if (localStorage.getItem("totalViews") >= database.length - 1) {
   setTimeout(function() {
     localStorage.setItem("lastViewedItem", 0);
