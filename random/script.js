@@ -25,7 +25,9 @@ function generateRandomNumber() {
   return randomNum;
 };
 
-window.scrollTo(0,document.body.scrollHeight);
+setTimeout(function(){
+  window.scrollTo(0, document.body.scrollHeight);
+}, 800);
 
 var randomNumber = generateRandomNumber();
 var madNumber = document.getElementById("madNumber");
