@@ -25,13 +25,15 @@ function generateRandomNumber() {
   return randomNum;
 };
 
+
 function scrollToBottom() {
   let currentY = window.pageYOffset;
   let targetY = document.body.scrollHeight - window.innerHeight;
   let animating = true;
   function step() {
-    if (currentY >= targetY) {
+    if (currentY >= targetY || currentY <= 0) {
       animating = false;
+      window.removeEventListener("scroll", onScroll);
       return;
     }
     let y = currentY + (targetY - currentY) * 0.05;
@@ -39,6 +41,12 @@ function scrollToBottom() {
     currentY = y;
     window.requestAnimationFrame(step);
   }
+  function onScroll() {
+    if (!animating) return;
+    currentY = window.pageYOffset;
+    targetY = document.body.scrollHeight - window.innerHeight;
+  }
+  window.addEventListener("scroll", onScroll);
   window.requestAnimationFrame(step);
 }
 setTimeout(scrollToBottom, 800);
