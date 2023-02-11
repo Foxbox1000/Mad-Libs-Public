@@ -53,14 +53,15 @@
       <h2>Select</h2>
     </div>
     <div id="selection" class="selection">
-      <input type="submit" value="Random Madlibs" onclick="random()">
-      <br>
-      <div>
-        <h2>Specific Madlibs
+      <div style="float: left;">
+        <input type="submit" value="Random Madlibs" onclick="random()">
       </div>
-      <input type="text" id="selectedInput" placeholder="Madlibs Number">
-      <br>
-      <input type="submit" value="Submit" onclick="selected()">
+      <div style="float: left;">
+        <h2>Specific Madlibs
+        <input type="text" id="selectedInput" placeholder="Madlibs Number">
+        <br>
+        <input type="submit" value="Submit" onclick="selected()">
+      </div>
     </div>
     <script>
       function random() {
