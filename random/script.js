@@ -15,12 +15,12 @@ if (localStorage.getItem("totalViews") >= database.length - 1) {
 };
 
 function generateRandomNumber() {
-  var randomNum = Math.floor(Math.random() * 4) + 1;
+  var randomNum = Math.floor(Math.random() * database.length - 1) + 1;
   let numberlists = localStorage.getItem("lastViewedItem");
   let textArray = numberlists.split(",");
   let numberArray = textArray.map(Number);
   while (numberArray.includes(randomNum)) {
-    randomNum = Math.floor(Math.random() * 4) + 1;
+    randomNum = Math.floor(Math.random() * database.length - 1) + 1;
   }
   return randomNum;
 };
