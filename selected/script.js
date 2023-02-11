@@ -62,6 +62,7 @@ function getResults() {
   endtextbox.classList.add("end-textbox");
   endtextbox.value = updatedText;
   document.querySelector("#generated").appendChild(endtextbox);
+  generateButton.style.display = "none";
   function scrollToBottom() {
     let currentY = window.pageYOffset;
     let targetY = document.body.scrollHeight - window.innerHeight;
