@@ -45,16 +45,16 @@ if (matches) {
     document.querySelector("#output").appendChild(textbox);
   }
 };
-for (let i = 0; i < parenthesisTextboxes.length; i++) {
-  const textboxValue = parenthesisTextboxes[i].value;
-  updatedText = updatedText.replace(
-    `(${matches[i].slice(1, -1)})`, textboxValue
-  );
-};
 function getResults() {
   const endtextbox = document.createElement("textarea");
-  endtextbox.type = "submit";
+  endtextbox.type = "text";
   endtextbox.classList.add("end-textbox");
   endtextbox.value = updatedText;
   document.querySelector("#generated").appendChild(endtextbox);
-}
+  for (let i = 0; i < parenthesisTextboxes.length; i++) {
+    const textboxValue = parenthesisTextboxes[i].value;
+    updatedText = updatedText.replace(
+      `(${matches[i].slice(1, -1)})`, textboxValue
+    );
+  };
+};
