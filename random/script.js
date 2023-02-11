@@ -26,7 +26,6 @@ function generateRandomNumber() {
 };
 
 var randomNumber = generateRandomNumber();
-
 var madNumber = document.getElementById("madNumber");
 madNumber.innerHTML = "Mad Lib number: " + randomNumber.toString();
 // Get the current value of the item from local storage
@@ -49,6 +48,7 @@ if (matches) {
   }
 };
 function getResults() {
+  let generateButton = document.querySelector("#generateButton");
   for (let i = 0; i < parenthesisTextboxes.length; i++) {
     const textboxValue = parenthesisTextboxes[i].value;
     updatedText = updatedText.replace(
@@ -60,4 +60,5 @@ function getResults() {
   endtextbox.classList.add("end-textbox");
   endtextbox.value = updatedText;
   document.querySelector("#generated").appendChild(endtextbox);
+  generateButton.style.display = "none";
 };
