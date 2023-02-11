@@ -25,25 +25,24 @@ function generateRandomNumber() {
   return randomNum;
 };
 
-//setTimeout(window.scrollTo(0,0), 200);
 function scrollToBottom() {
   let currentY = window.pageYOffset;
   let targetY = document.body.scrollHeight - window.innerHeight;
   let animating = true;
   function step() {
-    let y = currentY + (targetY - currentY) * 0.05;
-    if (y < targetY) {
-      window.scrollTo(0, y);
-      currentY = y;
-      window.requestAnimationFrame(step);
-    } else {
-      window.scrollTo(0, targetY);
+    if (currentY >= targetY) {
       animating = false;
+      return;
     }
+    let y = currentY + (targetY - currentY) * 0.05;
+    window.scrollTo(0, y);
+    currentY = y;
+    window.requestAnimationFrame(step);
   }
   window.requestAnimationFrame(step);
 }
 setTimeout(scrollToBottom, 800);
+
 
 
 var randomNumber = generateRandomNumber();
