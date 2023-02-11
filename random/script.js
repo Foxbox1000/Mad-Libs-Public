@@ -58,6 +58,10 @@ function getResults() {
   document.querySelector("#generated").appendChild(document.createElement("br"));
   document.querySelector("#generated").appendChild(document.createElement("br"));
   document.querySelector("#generated").appendChild(document.createElement("br"));
+  document.querySelector("#generated").appendChild(document.createElement("br"));
+  document.querySelector("#generated").appendChild(document.createElement("br"));
+  document.querySelector("#generated").appendChild(document.createElement("br"));
+  document.querySelector("#generated").appendChild(document.createElement("br"));
   const endtextbox = document.createElement("textarea");
   endtextbox.type = "text";
   endtextbox.classList.add("end-textbox");
