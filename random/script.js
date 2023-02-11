@@ -70,7 +70,6 @@ if (matches) {
     document.querySelector("#output").appendChild(textbox);
   }
 };
-window.scrollTo(0, 0);
 function getResults() {
   let generateButton = document.querySelector("#generateButton");
   for (let i = 0; i < parenthesisTextboxes.length; i++) {
@@ -109,3 +108,4 @@ function getResults() {
   }
   setTimeout(scrollToBottom, 250);
 };
+window.scrollTo(0, 0);
