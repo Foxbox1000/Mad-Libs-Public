@@ -55,6 +55,9 @@ function getResults() {
       `(${matches[i].slice(1, -1)})`, textboxValue
     );
   };
+  let br = document.createElement("br");
+  let br = document.createElement("br");
+  document.querySelector("#generated").appendChild(br);
   const endtextbox = document.createElement("textarea");
   endtextbox.type = "text";
   endtextbox.classList.add("end-textbox");
