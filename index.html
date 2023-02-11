@@ -17,6 +17,17 @@
         font-size: 20px;
         text-align: center;
       }
+      input[type="text"] {
+        width: 20%;
+        height: 40px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        margin-bottom: 10px;
+        font-size: 16px;
+        overflow: hidden;
+        resize: none;
+        color: white;
+      }
       input:hover {
         background-color: darkgreen;
       }
@@ -42,10 +53,19 @@
     </div>
     <div id="selection" class="selection">
       <input type="submit" value="Random Madlibs" onclick="random()">
+      <br>
+      <br>
+      <input type="text" id="selectedInput" placeholder="Madlibs Number">
+      <input type="submit" value="Certain Madlibs" onclick="selected()">
     </div>
     <script>
       function random() {
         window.location = "https://madlibs.triangledayschool.com/random/";
+      }
+      function selected() {
+        let selectedInput = document.querySelector("#selectedInput")
+        localStorage.setItem("selectedLib", Number(selectedInput));
+        window.location = "https://madlibs.triangledayschool.com/selected/";
       }
     </script>
   </body>
