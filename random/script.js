@@ -27,11 +27,15 @@ function generateRandomNumber() {
 
 function scrollToMiddle() {
   let currentY = window.pageYOffset;
-  let targetY = 600;
+  if (document.body.scrollHeight - window.innerHeight > 600) {
+    let targetY = 600;
+  } else {
+    let targetY = 600 - document.body.scrollHeight - window.innerHeight;
+  };
   let animating = true;
   function stepMiddle() {
     let y = currentY + (targetY - currentY) * 0.05;
-    if (window.pageYOffset < targetY && window.pageYOffset < document.body.scrollHeight - window.innerHeight) {
+    if (window.pageYOffset < targetY) { //&& window.pageYOffset < document.body.scrollHeight - window.innerHeight) {
       window.scrollTo(0, y);
       currentY = y;
       window.requestAnimationFrame(stepMiddle);
