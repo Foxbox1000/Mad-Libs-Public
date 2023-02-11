@@ -22,6 +22,28 @@ if (matches) {
     document.querySelector("#output").appendChild(textbox);
   }
 };
+function scrollToMiddle() {
+  let currentY = window.pageYOffset;
+  if (document.body.scrollHeight - window.innerHeight > 600) {
+    var targetY = 600;
+  } else {
+    var targetY = document.body.scrollHeight - window.innerHeight;
+  };
+  let animating = true;
+  function stepMiddle() {
+    let y = currentY + (targetY - currentY) * 0.05;
+    if (window.pageYOffset < targetY) { 
+      window.scrollTo(0, y);
+      currentY = y;
+      window.requestAnimationFrame(stepMiddle);
+    } else {
+      window.scrollTo(0, targetY);
+      animating = false;
+    }
+  }
+  window.requestAnimationFrame(stepMiddle);
+}
+setTimeout(scrollToMiddle, 800);
 function getResults() {
   for (let i = 0; i < parenthesisTextboxes.length; i++) {
     const textboxValue = parenthesisTextboxes[i].value;
@@ -34,4 +56,22 @@ function getResults() {
   endtextbox.classList.add("end-textbox");
   endtextbox.value = updatedText;
   document.querySelector("#generated").appendChild(endtextbox);
+  function scrollToBottom() {
+    let currentY = window.pageYOffset;
+    let targetY = document.body.scrollHeight - window.innerHeight;
+    let animating = true;
+    function step() {
+      let y = currentY + (targetY - currentY) * 0.05;
+      if (window.pageYOffset < targetY) {
+        window.scrollTo(0, y);
+        currentY = y;
+        window.requestAnimationFrame(step);
+      } else {
+        window.scrollTo(0, targetY);
+        animating = false;
+      }
+    }
+    window.requestAnimationFrame(step);
+  }
+  setTimeout(scrollToBottom, 250);
 };
