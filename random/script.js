@@ -56,7 +56,6 @@ function getResults() {
     );
   };
   let br = document.createElement("br");
-  let br = document.createElement("br");
   document.querySelector("#generated").appendChild(br);
   const endtextbox = document.createElement("textarea");
   endtextbox.type = "text";
