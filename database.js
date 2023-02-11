@@ -5,12 +5,12 @@ database.push("It was a dark and (adjective) night. It was rainy and (adjective)
 database.push("It was a dark and (adjective) night. I was (verb) through the snow. The snow was (adjective) and soft. My brother was (verb) stew. My (Noun) was (adjective) in the house and (adjective) with my pet Rhino. My Rhinos name is (name).");
 database.push("I (verb past tense) this morning at (time), and I did 3 things: (verb past tense), (verb past tense), and(verb past tense) the dogs. then(pronoun) showered, and got (adjective) in (adjective) clothes. After that (pronoun) got in the (vehicle) and (past tense verb) to (noun). When (pronoun) got there (pronoun) talked with (plural noun). Soon (noun) started. When (pronoun) got to (place) they started watching CNN (number). Soon (pronoun) got (past tense verb) out of the (place).");
 database.push("In this pamphlet, I will show you how to get rich (adverb).\
-Use your (noun) to make more (noun)\
-Invest in the (adjective) market\
-Take out (plural noun) from your local bank or financial institution\
-(verb) your outside spending, focus on business\
-Put your first (noun) made into a frame\
-Keep your profits (adjective) in the bank or your safe\
-Even though family is (adjective), money is more important than anything\
-Find a credit card with good (nouns)\
-Your are rich, congratulations!");
+1. Use your (noun) to make more (noun)\
+2. Invest in the (adjective) market\
+3. Take out (plural noun) from your local bank or financial institution\
+4. (verb) your outside spending, focus on business\
+5. Put your first (noun) made into a frame\
+6. Keep your profits (adjective) in the bank or your safe\
+7. Even though family is (adjective), money is more important than anything\
+8. Find a credit card with good (nouns)\
+9. Your are rich, congratulations!");
