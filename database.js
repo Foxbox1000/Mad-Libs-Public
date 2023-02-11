@@ -1,3 +1,4 @@
+window.scrollTo(0, 0);
 let database = [];
 database.push("spacer");
 database.push("It was a dark and (adjective) night. The (noun) was (verb) by the candle light. Slowly a (noun) came (adverb) out of the (noun). (adverb) it (verb) towards the (noun). Then the candle went (adjective) on the (noun).");
