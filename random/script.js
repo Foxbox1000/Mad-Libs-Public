@@ -25,6 +25,25 @@ function generateRandomNumber() {
   return randomNum;
 };
 
+function scrollToMiddle() {
+  let currentY = window.pageYOffset;
+  let targetY = 600;
+  let animating = true;
+  function stepMiddle() {
+    let y = currentY + (targetY - currentY) * 0.05;
+    if (window.pageYOffset < targetY && window.pageYOffset < document.body.scrollHeight - window.innerHeight) {
+      window.scrollTo(0, y);
+      currentY = y;
+      window.requestAnimationFrame(stepMiddle);
+    } else {
+      window.scrollTo(0, targetY);
+      animating = false;
+    }
+  }
+  window.requestAnimationFrame(stepMiddle);
+}
+setTimeout(scrollToMiddle, 800);
+
 var randomNumber = generateRandomNumber();
 var madNumber = document.getElementById("madNumber");
 madNumber.innerHTML = "Mad Lib number: " + randomNumber.toString();
