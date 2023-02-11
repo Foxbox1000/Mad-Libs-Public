@@ -1,38 +1,12 @@
-if (localStorage.getItem("lastViewedItem") == null) {
-  localStorage.setItem("lastViewedItem", 0);
-};
-
-if (localStorage.getItem("totalViews") == null) {
-  localStorage.setItem("totalViews", 0);
-};
-let totalViews = localStorage.getItem("totalViews")
-localStorage.setItem("totalViews", Number(totalViews) + 1);
-if (localStorage.getItem("totalViews") >= database.length - 1) {
-  setTimeout(function() {
-    localStorage.setItem("lastViewedItem", 0);
-    localStorage.setItem("totalViews", 0);
-  }, 40);
-};
-
-function generateRandomNumber() {
-  var randomNum = Math.floor(Math.random() * 4) + 1;
-  let numberlists = localStorage.getItem("lastViewedItem");
-  let textArray = numberlists.split(",");
-  let numberArray = textArray.map(Number);
-  while (numberArray.includes(randomNum)) {
-    randomNum = Math.floor(Math.random() * 4) + 1;
-  }
-  return randomNum;
-};
-
-var randomNumber = generateRandomNumber();
+let Number = localStorage.getItem("selectedLib")
+if (Number <= database.length - 1 && Number >= 1) {
+  randomNum = Math.floor(Math.random() * 4) + 1;
+}
 
 var madNumber = document.getElementById("madNumber");
-madNumber.innerHTML = "Mad Lib number: " + randomNumber.toString();
+madNumber.innerHTML = "Mad Lib number: " + Number.toString();
 // Get the current value of the item from local storage
-var currentValue = localStorage.getItem("lastViewedItem");
-localStorage.setItem("lastViewedItem", currentValue + "," + randomNumber.toString());
-const input = database[randomNumber];
+const input = database[Number];
 let updatedText = input;
 const parenthesisTextboxes = document.getElementsByClassName(
   "parenthesis-textbox"
