@@ -108,4 +108,3 @@ function getResults() {
   }
   setTimeout(scrollToBottom, 250);
 };
-window.scrollTo(0, 0);
