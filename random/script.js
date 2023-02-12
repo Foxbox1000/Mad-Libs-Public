@@ -127,6 +127,7 @@ function getResults() {
     leavebutton.type = "submit"
     leavebutton.placeholder = "LEAVE"
     leavebutton.onClick = "window.location = '/'"
+    document.querySelector("#generated").appendChild(leavebutton);
   };
   function scrollToBottom() {
     let currentY = window.pageYOffset;
