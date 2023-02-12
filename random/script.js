@@ -55,6 +55,7 @@ if (randomNumber == 0) {
   
 }
 if (randomNumber == 0) {
+  document.getElementById("logo").src = "/random/troll_logo.png";
   const madNumber = document.getElementById("madNumber");
   let characters = "-0123456789%$#@&<>~";
   let result = "";
