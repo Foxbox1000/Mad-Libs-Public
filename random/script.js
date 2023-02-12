@@ -79,7 +79,7 @@ function getResults() {
     );
   };
   const authortextbox = document.createElement("h1")
-  authortextbox.value = "Author: " + name_database[randomNumber];
+  authortextbox.innerHTML = "Author: " + name_database[randomNumber];
   document.querySelector("#generated").appendChild(authortextbox);
   const endtextbox = document.createElement("textarea");
   endtextbox.type = "text";
