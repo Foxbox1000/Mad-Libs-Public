@@ -35,7 +35,7 @@ function scrollToMiddle() {
   let animating = true;
   function stepMiddle() {
     let y = currentY + (targetY - currentY) * 0.05;
-    if (window.pageYOffset < targetY) { //&& window.pageYOffset < document.body.scrollHeight - window.innerHeight) {
+    if (window.pageYOffset < targetY) { 
       window.scrollTo(0, y);
       currentY = y;
       window.requestAnimationFrame(stepMiddle);
