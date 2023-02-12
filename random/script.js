@@ -128,8 +128,10 @@ function getResults() {
     leavebutton.value = "LEAVE";
     document.querySelector("#generated").appendChild(document.createElement("br"));
     document.querySelector("#generated").appendChild(leavebutton);
+    let sound = new Audio("/random/leave.mp3");
     leavebutton.addEventListener("click", function() {
-      new Audio("leave.mp3").play
+      sound.currentTime = 0;
+      sound.play();
       setTimeout(function() { window.location.href = "/"; }, 2000);
     });
   };
