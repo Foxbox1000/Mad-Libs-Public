@@ -1,5 +1,5 @@
 let database = [];
-database.push("spacer");
+database.push("(TROLL) (TROLL) (TROLL) (TROLL) (TROLL) (TROLL) (TROLL) (TROLL) (TROLL) (TROLL)");
 database.push("It was a (adjective) and gloomy day. My cat had (verb) away. I slowly walked up the (noun). While I was still in my (noun plural), the bell rang. I went to (verb) it, and who was (verb ending in -ing) at my door? None other than my cat, who was now (emotion). I cried for joy and (verb) him tight, As we head up to bed, and (verb) goodnight.");
 database.push("I (verb past tense) this morning at (time), and I did 3 things: (verb past tense), (verb past tense), and (verb past tense) the dogs. Then (pronoun) showered, and got (adjective) in (adjective) clothes. After that (pronoun) got in the (vehicle) and (past tense verb) to (noun). When (pronoun) got there (pronoun) talked with (plural noun). Soon (noun) started. When (pronoun) got to (place) they started watching CNN (number). Soon (pronoun) got (past tense verb) out of the (place).");
 database.push("It was a dark and (adjective) night. Paul was (verb-ing) on the coach. (adverb) there was a knock on the door. Paul yelled “(noun) answer the door”. (noun) answered the door. There was a (noun) outside. (noun) yelled “help”, but it was too late. (noun) died. Paul continued (verb-ing) on the coach.");
