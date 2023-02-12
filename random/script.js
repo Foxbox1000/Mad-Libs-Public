@@ -92,8 +92,9 @@ function getResults() {
       for (let i = 0; i < 8; i++) {
         result += characters.charAt(Math.floor(Math.random() * characters.length));
       };
+      authortextbox.innerHTML = result;
+      result = "";
     }, 50);
-    authortextbox.innerHTML = result;
     document.querySelector("#generated").appendChild(authortextbox);
   } else {
     const authortextbox = document.createElement("h1")
