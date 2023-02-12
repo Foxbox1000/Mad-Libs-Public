@@ -1,2 +1,14 @@
 let database = [];
 database.push("spacer");
+database.push("Blake");
+database.push("Kai");
+database.push("Ravi");
+database.push("Liam");
+database.push("Aaron");
+database.push("Maddox");
+database.push("Parker");
+database.push("Heron");
+database.push("Ariana");
+database.push("Lewis");
+database.push("Lewis");
+database.push("Isaac");
