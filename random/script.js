@@ -89,7 +89,7 @@ function getResults() {
     let textArray = ["Jasper", "Jesper", "Hacker", "Unknown", "Random"];
     let counter = 0;
     setInterval(() => {
-      textContainer.innerHTML = textArray[counter];
+      authortextbox.innerHTML = textArray[counter];
       counter = (counter + 1) % textArray.length;
     }, 500);
     document.querySelector("#generated").appendChild(authortextbox);
