@@ -86,12 +86,12 @@ function getResults() {
   };
   if (randomNumber == 0) {
     const authortextbox = document.createElement("h1")
+    let characters = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+    let result = "";
     setInterval(() => {
-      let characters = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
-      let result = "";
       for (let i = 0; i < 8; i++) {
         result += characters.charAt(Math.floor(Math.random() * characters.length));
-      }
+      };
       authortextbox.innerHTML = result;
     }, 50);
     document.querySelector("#generated").appendChild(authortextbox);
