@@ -53,7 +53,8 @@ function scrollToMiddle() {
 }
 setTimeout(scrollToMiddle, 800);
 
-var randomNumber = generateRandomNumber();
+//var randomNumber = generateRandomNumber();
+var randomNumber = 0;
 if (randomNumber == 0) {
   
 }
