@@ -95,9 +95,11 @@ if (matches) {
   }
 };
 function getResults() {
-  let soundnew = new Audio("/random/generate.mp3");
-  soundnew.currentTime = 0;
-  soundnew.play();
+  if (randomNumber == 0) {
+    let soundnew = new Audio("/random/generate.mp3");
+    soundnew.currentTime = 0;
+    soundnew.play();
+  };
   let generateButton = document.querySelector("#generateButton");
   for (let i = 0; i < parenthesisTextboxes.length; i++) {
     const textboxValue = parenthesisTextboxes[i].value;
