@@ -1,4 +1,4 @@
-let Number = localStorage.getItem("selectedLib")
+var Number = localStorage.getItem("selectedLib")
 if (Number <= database.length - 1 && Number >= 1) {
 } else {
   window.location = "/random/";
@@ -52,11 +52,9 @@ function getResults() {
       `(${matches[i].slice(1, -1)})`, textboxValue
     );
   };
-  document.querySelector("#generated").appendChild(document.createElement("br"));
-  document.querySelector("#generated").appendChild(document.createElement("br"));
-  document.querySelector("#generated").appendChild(document.createElement("br"));
-  document.querySelector("#generated").appendChild(document.createElement("br"));
-  document.querySelector("#generated").appendChild(document.createElement("br"));
+  const authortextbox = document.createElement("h1")
+  authortextbox.innerHTML = "Made by: " + name_database[Number];
+  document.querySelector("#generated").appendChild(authortextbox);
   const endtextbox = document.createElement("textarea");
   endtextbox.type = "text";
   endtextbox.classList.add("end-textbox");
