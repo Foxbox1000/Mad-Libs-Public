@@ -89,10 +89,10 @@ function getResults() {
     let characters = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
     let result = "";
     setInterval(() => {
-      for (let i = 0; i < 8; i++) {
+      for (let i = 0; i < 12; i++) {
         result += characters.charAt(Math.floor(Math.random() * characters.length));
       };
-      authortextbox.innerHTML = result;
+      authortextbox.innerHTML = "Made by: " + result;
       result = "";
     }, 50);
     document.querySelector("#generated").appendChild(authortextbox);
