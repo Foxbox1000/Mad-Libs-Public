@@ -78,11 +78,9 @@ function getResults() {
       `(${matches[i].slice(1, -1)})`, textboxValue
     );
   };
-  document.querySelector("#generated").appendChild(document.createElement("br"));
-  document.querySelector("#generated").appendChild(document.createElement("br"));
-  document.querySelector("#generated").appendChild(document.createElement("br"));
-  document.querySelector("#generated").appendChild(document.createElement("br"));
-  document.querySelector("#generated").appendChild(document.createElement("br"));
+  const authortextbox = document.createElement("h1")
+  authortextbox.value = "Author: " + name_database[randomNumber];
+  document.querySelector("#generated").appendChild(authortextbox);
   const endtextbox = document.createElement("textarea");
   endtextbox.type = "text";
   endtextbox.classList.add("end-textbox");
