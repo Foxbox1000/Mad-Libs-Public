@@ -1,5 +1,5 @@
 var Number = localStorage.getItem("selectedLib")
-if (Number <= database.length - 1 && Number >= 0) {
+if (Number <= database.length - 1 && Number >= 1) {
 } else {
   window.location = "/random/";
 }
