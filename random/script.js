@@ -126,7 +126,7 @@ function getResults() {
     const leavebutton = document.createElement("input");
     leavebutton.type = "submit";
     leavebutton.value = "LEAVE";
-    leavebutton.onclick = 'window.location = "/"';
+    leavebutton.onClick = "window.location = '/'";
     document.querySelector("#generated").appendChild(document.createElement("br"));
     document.querySelector("#generated").appendChild(leavebutton);
   };
