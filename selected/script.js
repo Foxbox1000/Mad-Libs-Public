@@ -1,11 +1,11 @@
 let Number = localStorage.getItem("selectedLib")
 if (Number <= database.length - 1 && Number >= 1) {
-  randomNum = Math.floor(Math.random() * 4) + 1;
+} else {
+  window.location = "/random/";
 }
 
 var madNumber = document.getElementById("madNumber");
 madNumber.innerHTML = "Mad Lib number: " + Number.toString();
-// Get the current value of the item from local storage
 const input = database[Number];
 let updatedText = input;
 const parenthesisTextboxes = document.getElementsByClassName(
