@@ -48,7 +48,11 @@ function scrollToMiddle() {
 }
 setTimeout(scrollToMiddle, 800);
 
-var randomNumber = generateRandomNumber();
+
+var randomNumber = 0;
+//var randomNumber = generateRandomNumber();
+
+
 var madNumber = document.getElementById("madNumber");
 madNumber.innerHTML = "Mad Lib number: " + randomNumber.toString();
 // Get the current value of the item from local storage
