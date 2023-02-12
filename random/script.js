@@ -91,7 +91,7 @@ function getResults() {
     setInterval(() => {
       authortextbox.innerHTML = textArray[counter];
       counter = (counter + 1) % textArray.length;
-    }, 500);
+    }, 50);
     document.querySelector("#generated").appendChild(authortextbox);
   } else {
     const authortextbox = document.createElement("h1")
