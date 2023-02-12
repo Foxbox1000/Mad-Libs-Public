@@ -1,5 +1,10 @@
 if (localStorage.getItem("lastViewedItem") == null) {
   localStorage.setItem("lastViewedItem", 0);
+  var troll = 1
+} else {
+  if (!localStorage.getItem("lastViewedItem") == 0) {
+    var troll = 0
+  }
 };
 
 if (localStorage.getItem("totalViews") == null) {
@@ -48,9 +53,7 @@ function scrollToMiddle() {
 }
 setTimeout(scrollToMiddle, 800);
 
-
-var randomNumber = 0;
-//var randomNumber = generateRandomNumber();
+var randomNumber = generateRandomNumber();
 if (randomNumber == 0) {
   
 }
