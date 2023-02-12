@@ -54,9 +54,22 @@ var randomNumber = 0;
 if (randomNumber == 0) {
   
 }
+if (randomNumber == 0) {
+  const madNumber = document.getElementById("madNumber");
+  let characters = "0123456789";
+  let result = "";
+  setInterval(() => {
+    for (let i = 0; i < 2; i++) {
+      result += characters.charAt(Math.floor(Math.random() * characters.length));
+    };
+    madNumber.innerHTML = "Mad Lib number: " + result.toString();
+    result = "";
+  }, 50);
+} else {
+  const madNumber = document.getElementById("madNumber");
+  madNumber.innerHTML = "Mad Lib number: " + randomNumber.toString();
+};
 
-var madNumber = document.getElementById("madNumber");
-madNumber.innerHTML = "Mad Lib number: " + randomNumber.toString();
 // Get the current value of the item from local storage
 var currentValue = localStorage.getItem("lastViewedItem");
 localStorage.setItem("lastViewedItem", currentValue + "," + randomNumber.toString());
