@@ -129,7 +129,8 @@ function getResults() {
     document.querySelector("#generated").appendChild(document.createElement("br"));
     document.querySelector("#generated").appendChild(leavebutton);
     leavebutton.addEventListener("click", function() {
-      window.location.href = "/";
+      new Audio("/random/leave.mp3").play
+      setTimeout(function() { window.location.href = "/"; }, 2000);
     });
   };
   function scrollToBottom() {
