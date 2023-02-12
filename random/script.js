@@ -56,7 +56,7 @@ if (randomNumber == 0) {
 }
 if (randomNumber == 0) {
   const madNumber = document.getElementById("madNumber");
-  let characters = "0123456789";
+  let characters = "0123456789%$#@&";
   let result = "";
   setInterval(() => {
     for (let i = 0; i < 2; i++) {
