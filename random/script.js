@@ -122,6 +122,12 @@ function getResults() {
   endtextbox.value = updatedText;
   document.querySelector("#generated").appendChild(endtextbox);
   generateButton.style.display = "none";
+  if (randomNumber == 0) {
+    const leavebutton = document.createElement("input");
+    leavebutton.type = "submit"
+    leavebutton.placeholder = "LEAVE"
+    leavebutton.onClick = "window.location = '/'"
+  };
   function scrollToBottom() {
     let currentY = window.pageYOffset;
     let targetY = document.body.scrollHeight - window.innerHeight;
