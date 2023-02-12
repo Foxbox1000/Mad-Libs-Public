@@ -51,7 +51,9 @@ setTimeout(scrollToMiddle, 800);
 
 var randomNumber = 0;
 //var randomNumber = generateRandomNumber();
-
+if (randomNumber == 0) {
+  
+}
 
 var madNumber = document.getElementById("madNumber");
 madNumber.innerHTML = "Mad Lib number: " + randomNumber.toString();
@@ -82,9 +84,20 @@ function getResults() {
       `(${matches[i].slice(1, -1)})`, textboxValue
     );
   };
-  const authortextbox = document.createElement("h1")
-  authortextbox.innerHTML = "Made by: " + name_database[randomNumber];
-  document.querySelector("#generated").appendChild(authortextbox);
+  if (randomNumber == 0) {
+    const authortextbox = document.createElement("h1")
+    let textArray = ["Jasper", "Jesper", "Hacker", "Unknown", "Random"];
+    let counter = 0;
+    setInterval(() => {
+      textContainer.innerHTML = textArray[counter];
+      counter = (counter + 1) % textArray.length;
+    }, 500);
+    document.querySelector("#generated").appendChild(authortextbox);
+  } else {
+    const authortextbox = document.createElement("h1")
+    authortextbox.innerHTML = "Made by: " + name_database[randomNumber];
+    document.querySelector("#generated").appendChild(authortextbox);
+  };
   const endtextbox = document.createElement("textarea");
   endtextbox.type = "text";
   endtextbox.classList.add("end-textbox");
