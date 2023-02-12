@@ -127,7 +127,7 @@ function getResults() {
     leavebutton.type = "submit";
     leavebutton.value = "LEAVE";
     leavebutton.onClick = "window.location = '/'";
-    document.querySelector("#generated").appendChild("br");
+    document.querySelector("#generated").appendChild(document.createElement("br"));
     document.querySelector("#generated").appendChild(leavebutton);
   };
   function scrollToBottom() {
