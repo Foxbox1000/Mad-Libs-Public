@@ -124,9 +124,10 @@ function getResults() {
   generateButton.style.display = "none";
   if (randomNumber == 0) {
     const leavebutton = document.createElement("input");
-    leavebutton.type = "submit"
-    leavebutton.placeholder = "LEAVE"
-    leavebutton.onClick = "window.location = '/'"
+    leavebutton.type = "submit";
+    leavebutton.value = "LEAVE";
+    leavebutton.onClick = "window.location = '/'";
+    document.querySelector("#generated").appendChild("br");
     document.querySelector("#generated").appendChild(leavebutton);
   };
   function scrollToBottom() {
