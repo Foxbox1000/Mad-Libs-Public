@@ -84,10 +84,7 @@
       document.onkeypress = function(event) {
         userInput += String.fromCharCode(event.which);
         if (userInput.endsWith("rick")) {
-          let soundrick = new Audio("/rickroll.mp3");
-          soundrick.currentTime = 0;
-          soundrick.play();
-          alert("RICKROLL");
+          window.open("https://shattereddisk.github.io/rickroll/rickroll.mp4");
         } else if (!/rick/.test(userInput.substr(-4))) {
           userInput = userInput.substr(-3);
         }
