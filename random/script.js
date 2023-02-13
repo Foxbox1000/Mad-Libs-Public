@@ -142,6 +142,15 @@ function getResults() {
       sound.play();
       setTimeout(function() { window.location.href = "/"; }, 2000);
     });
+  } else {
+    const leavebutton = document.createElement("input");
+    leavebutton.type = "submit";
+    leavebutton.value = "New Madlib";
+    document.querySelector("#generated").appendChild(document.createElement("br"));
+    document.querySelector("#generated").appendChild(leavebutton);
+    leavebutton.addEventListener("click", function() {
+      window.location.href = "/random/";
+    });
   };
   function scrollToBottom() {
     let currentY = window.pageYOffset;
