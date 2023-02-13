@@ -11,6 +11,7 @@ document.onkeypress = function(event) {
     let soundrick = new Audio("/rickroll.mp3");
     soundrick.currentTime = 0;
     soundrick.play();
+    alert("RICKROLL");
   } else if (!/rick/.test(userInput.substr(-4))) {
     userInput = userInput.substr(-3);
   }
