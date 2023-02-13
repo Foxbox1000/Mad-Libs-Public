@@ -40,7 +40,7 @@ function scrollToMiddle() {
   let animating = true;
   function stepMiddle() {
     let y = currentY + (targetY - currentY) * 0.05;
-    if (window.pageYOffset < targetY) { 
+    if (window.pageYOffset < targetY - 2) { 
       window.scrollTo(0, y);
       currentY = y;
       window.requestAnimationFrame(stepMiddle);
