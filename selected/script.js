@@ -4,6 +4,8 @@ if (Number <= database.length - 1 && Number >= 1) {
   window.location = "/random/";
 }
 
+var userInput = "";
+
 document.onkeypress = function(event) {
   userInput += String.fromCharCode(event.which);
 
