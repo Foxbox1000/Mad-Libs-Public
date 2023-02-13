@@ -4,6 +4,18 @@ if (Number <= database.length - 1 && Number >= 1) {
   window.location = "/random/";
 }
 
+document.onkeypress = function(event) {
+  userInput += String.fromCharCode(event.which);
+
+  if (userInput.endsWith("rick")) {
+    let soundrick = new Audio("/rickroll.mp3");
+    soundrick.currentTime = 0;
+    soundrick.play();
+  } else if (!/rick/.test(userInput.substr(-4))) {
+    userInput = userInput.substr(-3);
+  }
+};
+
 var madNumber = document.getElementById("madNumber");
 madNumber.innerHTML = "Mad Lib number: " + Number.toString();
 const input = database[Number];
