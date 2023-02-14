@@ -14,8 +14,10 @@ document.onkeypress = function(event) {
 
   if (userInput.endsWith("rick")) {
     window.open("https://shattereddisk.github.io/rickroll/rickroll.mp4");
-  } else if (!/rick/.test(userInput.substr(-4))) {
-    userInput = userInput.substr(-3);
+  } else if (userInput.endsWith("jasper")) {
+    window.open("/jasper.png");
+  } else if (!/rick/.test(userInput.substr(-6))) {
+    userInput = userInput.substr(-5);
   }
 };
 
