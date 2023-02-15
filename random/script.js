@@ -20,6 +20,9 @@ document.onkeypress = function(event) {
     window.open("/media/dog.mp4")
   } else if (userInput.endsWith("will")) {
     window.open("/media/will.jpg")
+  } else if (userInput.endsWith("troll")) {
+    localStorage.setItem("troll", 1);
+    window.location = "/ramdom";
   } else if (!/rick/.test(userInput.substr(-6))) {
     userInput = userInput.substr(-5);
   }
@@ -72,8 +75,9 @@ function scrollToMiddle() {
 setTimeout(scrollToMiddle, 800);
 
 var randomNumber = generateRandomNumber();
-if (randomNumber == 0) {
-  
+if (localStorage.getItem("troll") == 1) {
+  localStorage.setItem("troll", 0);
+  randomNumber = 0
 }
 if (randomNumber == 0) {
   document.getElementById("logo").src = "/random/troll_logo.png";
