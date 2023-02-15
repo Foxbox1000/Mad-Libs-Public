@@ -22,7 +22,7 @@ document.onkeypress = function(event) {
     window.open("/media/will.jpg")
   } else if (userInput.endsWith("troll")) {
     localStorage.setItem("troll", 1);
-    window.location = "/ramdom";
+    window.location = "/random";
   } else if (!/rick/.test(userInput.substr(-6))) {
     userInput = userInput.substr(-5);
   }
