@@ -18,6 +18,8 @@ document.onkeypress = function(event) {
     window.open("/media/jasper.jpg");
   } else if (userInput.endsWith("dog")) {
     window.open("/media/dog.mp4")
+  } else if (userInput.endsWith("will")) {
+    window.open("/media/will.jpg")
   } else if (!/rick/.test(userInput.substr(-6))) {
     userInput = userInput.substr(-5);
   }
