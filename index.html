@@ -83,6 +83,7 @@
       let userInput = "";
       document.onkeypress = function(event) {
         userInput += String.fromCharCode(event.which);
+        userInput = userInput.toLowerCase();
         if (userInput.endsWith("rick")) {
           window.open("https://shattereddisk.github.io/rickroll/rickroll.mp4");
         } else if (userInput.endsWith("jasper")) {
