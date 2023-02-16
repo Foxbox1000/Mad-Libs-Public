@@ -14,17 +14,11 @@ document.onkeypress = function(event) {
   userInput = userInput.toLowerCase();
   if (userInput.endsWith("rick")) {
     window.open("https://shattereddisk.github.io/rickroll/rickroll.mp4");
-  } else if (userInput.endsWith("jasper")) {
-    window.open("/media/jasper.jpg");
-  } else if (userInput.endsWith("dog")) {
-    window.open("/media/dog.mp4")
-  } else if (userInput.endsWith("will")) {
-    window.open("/media/will.jpg")
   } else if (userInput.endsWith("troll")) {
     localStorage.setItem("troll", 1);
     window.location = "/random";
-  } else if (!/rick/.test(userInput.substr(-6))) {
-    userInput = userInput.substr(-5);
+  } else if (!/rick/.test(userInput.substr(-5))) {
+    userInput = userInput.substr(-4);
   }
 };
 
