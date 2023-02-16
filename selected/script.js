@@ -4,24 +4,6 @@ if (Number <= database.length - 1 && Number >= 1) {
   window.location = "/random/";
 }
 
-var userInput = "";
-
-document.onkeypress = function(event) {
-  userInput += String.fromCharCode(event.which);
-  userInput = userInput.toLowerCase();
-  if (userInput.endsWith("rick")) {
-    window.open("https://shattereddisk.github.io/rickroll/rickroll.mp4");
-  } else if (userInput.endsWith("jasper")) {
-    window.open("/media/jasper.jpg");
-  } else if (userInput.endsWith("dog")) {
-    window.open("/media/dog.mp4")
-  } else if (userInput.endsWith("will")) {
-    window.open("/media/will.jpg")
-  } else if (!/rick/.test(userInput.substr(-6))) {
-    userInput = userInput.substr(-5);
-  }
-};
-
 var madNumber = document.getElementById("madNumber");
 madNumber.innerHTML = "Mad Lib number: " + Number.toString();
 const input = database[Number];
