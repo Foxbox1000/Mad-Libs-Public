@@ -12,3 +12,5 @@ database.push("It was a dark and (adjective) night. The (noun) was (verb) by the
 database.push("It was a dark and (adjective) night. As you (adverb) (verb) into the forest. You hear a (adjective) sound. Then suddenly out jumps a (noun). As you (verb) for your (noun) you (verb) something. Then you (verb) and the (2nd noun from earlier) lay defeated on the (adjective) ground with (adjective) (noun) spilling across the (noun). Then you leave and think (interjection).");
 database.push("As you (verb), your teacher (verb ends with s). This perks your (noun). You awaken from your (adjective) (noun). You look at your friend (name). Friend (name from earlier) says “(interjection)” .  Then  you (verb) the (noun). The (last noun) (verb) then the teacher gets in (noun).");
 database.push("There are many (adjectives) to choose a/an (noun) to read. First, you could ask for recommendations from friends and (plural noun). Just don't ask aunt (female name) – she only reads (adjectives) books with (article of clothing) on the cover. If your friends and family are no help then use (noun) to search up ideas.");
+
+const a = const b = const c = const d = const e = const n = 10;
